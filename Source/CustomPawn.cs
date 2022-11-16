@@ -1428,7 +1428,8 @@ namespace EdB.PrepareCarefully {
                     }
                 }
             }
-            ResetCachedHead();
+            var head = PrepareCarefully.Instance.Providers.HeadTypes.GetHeadTypes(pawn.def, pawn.gender).First();
+            this.HeadType = head;
         }
 
         public string ResetCachedIncapableOf() {
